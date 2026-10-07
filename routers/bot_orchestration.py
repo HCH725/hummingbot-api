@@ -474,7 +474,8 @@ async def deploy_v2_controllers(
     This endpoint simplifies the deployment process for V2 controller strategies.
 
     Args:
-        deployment: V2ControllerDeployment configuration
+        deployment: V2ControllerDeployment configuration. If no image is supplied,
+            deployment uses local/hummingbot:cb588082 by default.
         docker_manager: Docker service dependency
 
     Returns:
@@ -561,7 +562,8 @@ async def deploy_v2_script(
 
     Args:
         deployment: V2ScriptDeployment configuration containing instance name, credentials,
-                   optional script name and configuration
+                   optional script name and configuration. If no image is supplied,
+                   deployment uses local/hummingbot:cb588082 by default.
         docker_manager: Docker service dependency
         db_manager: Database manager dependency
 
